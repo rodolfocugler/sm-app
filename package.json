@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -16,6 +18,7 @@
     "@mui/material": "^5.15.14",
     "@mui/material-nextjs": "^5.15.11",
     "@mui/styles": "^5.15.14",
+    "gh-pages": "^6.1.1",
     "next": "14.1.4",
     "prop-types": "^15.8.1",
     "react": "^18",
