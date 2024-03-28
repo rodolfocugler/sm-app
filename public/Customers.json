@@ -1,0 +1,57 @@
+{
+  "customers": {
+    "bootstrap": [],
+    "elastic": [
+      {
+        "id": 1,
+        "title": "Emerson",
+        "imageUrl": "https://www.emerson.com/resource/blob/emerson-logo-data-390792.png"
+      },
+      {
+        "id": 2,
+        "title": "Uniso",
+        "imageUrl": "https://www.uniso.br/assets/img/logo.png"
+      },
+      {
+        "id": 3,
+        "title": "DHL Express",
+        "imageUrl": "https://www.dhl.de/.resources/dhl/webresources/assets/img//dhl-official.svg"
+      },
+      {
+        "id": 4,
+        "title": "SBT",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/4/41/Logotipo_do_SBT.svg/2048px-Logotipo_do_SBT.svg.png"
+      },
+      {
+        "id": 5,
+        "title": "Globo",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_globo_principal-laranja.png"
+      },
+      {
+        "id": 1,
+        "title": "Emerson",
+        "imageUrl": "https://www.emerson.com/resource/blob/emerson-logo-data-390792.png"
+      },
+      {
+        "id": 2,
+        "title": "Uniso",
+        "imageUrl": "https://www.uniso.br/assets/img/logo.png"
+      },
+      {
+        "id": 3,
+        "title": "DHL Express",
+        "imageUrl": "https://www.dhl.de/.resources/dhl/webresources/assets/img//dhl-official.svg"
+      },
+      {
+        "id": 4,
+        "title": "SBT",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/4/41/Logotipo_do_SBT.svg/2048px-Logotipo_do_SBT.svg.png"
+      },
+      {
+        "id": 5,
+        "title": "Globo",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_globo_principal-laranja.png"
+      }
+    ]
+  }
+}

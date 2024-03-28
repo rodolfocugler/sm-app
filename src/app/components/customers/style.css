@@ -1,0 +1,29 @@
+
+.rec-carousel-item {
+    align-content: center
+}
+
+.rec-carousel-wrapper {
+    width: 100%
+}
+
+button.rec.rec-arrow {
+    background-color: #2196f3;
+}
+
+button.rec.rec-arrow:hover,
+button.rec.rec-arrow:focus{
+    background-color: #64b5f6;
+}
+
+.rec-dot {
+    box-shadow: 0 0 1px 3px #2196f3 !important;
+}
+
+.rec.rec-dot_active {
+    background-color: #64b5f6;
+}
+
+.rec-pagination > button {
+    border-color: #2196f3;
+}
