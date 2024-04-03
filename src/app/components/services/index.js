@@ -18,29 +18,40 @@ function Services({innerRef}) {
         marginBottom: 5,
         backgroundColor: theme.palette.primary.main
       }}
+      spacing={0}
       paddingX={{xs: 5, sm: 8, lg: 24}}
       paddingTop={{xs: 5, sm: 8, md: 13}}
       paddingBottom={{xs: 6}}>
 
-      <Typography variant="h4">SERVIÇOS</Typography>
+      <Typography variant="h4">NOSSOS SERVIÇOS</Typography>
 
-      <ServiceRow
-        title={"SUPERVISÃO"}
-        values={[ {title: "Medicina nuclear", icon: "Person"},
-          {title: "Radiografia Industrial", icon: "SportsHandball"},
-          {title: "Medidores Nucleares", icon: "AddCircle"} ]}/>
+      <Grid
+        container
+        spacing={3}
+        marginTop={3}
+        direction={"row"}>
 
-      <ServiceRow
-        title={"CONSULTORIA"}
-        values={[ {title: "Auditoria", icon: "Person"},
-          {title: "Licenciamento CNEN", icon: "Person"},
-          {title: "Treinamentos", icon: "Person"} ]}/>
+        <Grid item xs={4}>
+          <ServiceRow
+            title={"SUPERVISÃO"}
+            icon={"AssignmentInd"}
+            values={[ "Medicina nuclear", "Radiografia Industrial", "Medidores Nucleares" ]}/>
+        </Grid>
 
-      <ServiceRow
-        title={"OUTROS"}
-        values={[ {title: "Teste de Fuga", icon: "Person"},
-          {title: "Levantamento Radiométrico", icon: "Person"},
-          {title: "Laudos Técnicos", icon: "Person"} ]}/>
+        <Grid item xs={4}>
+          <ServiceRow
+            title={"CONSULTORIA"}
+            icon={"Description"}
+            values={[ "Auditoria", "Licenciamento CNEN", "Treinamentos" ]}/>
+        </Grid>
+
+        <Grid item xs={4}>
+          <ServiceRow
+            title={"OUTROS"}
+            icon={"Engineering"}
+            values={[ "Teste de Fuga", "Levantamento Radiométrico", "Laudos Técnicos" ]}/>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }

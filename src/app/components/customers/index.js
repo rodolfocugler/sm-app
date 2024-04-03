@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Typography from "@mui/material/Typography";
 import {Grid} from "@mui/material";
-import {customers} from "../../../../public/Customers.json";
+import CustomerList from "../../../../public/CustomerList.json";
 import Carousel from 'react-elastic-carousel';
 import "./style.css"
+import Image from "next/image";
 
 const breakPoints = [
   {width: 1, itemsToShow: 1},
@@ -13,7 +14,7 @@ const breakPoints = [
 ];
 
 function Customers({innerRef}) {
-  const {elastic} = customers;
+  const {elastic} = CustomerList.CustomerList;
 
   return (
     <Grid
@@ -32,12 +33,14 @@ function Customers({innerRef}) {
 
       <Carousel breakPoints={breakPoints} isRTL={false}>
         {elastic.map((item) => (
-          <img
+          <Image
             key={item.id}
             src={item.imageUrl}
             loading={"lazy"}
+            width={150}
+            height={150}
             alt={item.title}
-            width={"100px"}/>
+          />
         ))}
       </Carousel>
     </Grid>

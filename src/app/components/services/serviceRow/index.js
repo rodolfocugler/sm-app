@@ -3,46 +3,63 @@ import {useTheme} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import {Grid} from "@mui/material";
 import * as Icons from '@mui/icons-material';
+import ListItem from "@mui/material/ListItem";
+import List from "@mui/material/List";
 
-function ServiceRow({title, values}) {
+function ServiceRow({title, values, icon}) {
   const theme = useTheme();
+  const IconComponent = Icons[icon];
 
   return (
     <Grid
       container
-      direction={"row"}
-      borderRadius={"25px"}
-      border={0}
-      sx={{
-        backgroundColor: theme.palette.primary[300]
-      }}
-      padding={{xs: 3, sm: 6}}
-      margin={2}
-      spacing={1}
+      direction={"column"}
+      sx={{backgroundColor: theme.palette.primary[300]}}
+      paddingX={{xs: 3}}
+      paddingBottom={{xs: 3, sm: 5, md: 8}}
+      paddingTop={7}
+      position={"relative"}
+      spacing={0}
       alignItems={"center"}
       alignContent={"center"}
       justifyContent={"center"}
       textAlign={"center"}>
 
-      <Grid item xs={12} sm={3}>
-        <Typography variant={"h6"}>{title}</Typography>
+      <Grid
+        xs={12}
+        borderRadius={25}
+        position={"absolute"}
+        top={-40}
+        sx={{backgroundColor: theme.palette.primary[700]}}>
+        <IconComponent fontSize={"large"}
+                       sx={{
+                         display: {xs: "none", sm: "block"},
+                         margin: 3,
+                         padding: 0
+                       }}/>
       </Grid>
 
-      {values.map(item => {
-        const IconComponent = Icons[item.icon];
+      <Grid item xs={12}>
+        <Typography variant={"h5"} fontWeight={"bold"}>{title}</Typography>
+      </Grid>
 
-        return (
-          <Grid item xs={12} sm={3} key={item}>
-            <Grid
-              container
-              direction={"column"}
-              alignItems={"center"}>
-              <IconComponent fontSize={"large"} sx={{display: {xs: "none", sm: "block"}}}/>
-              <Typography variant={"subtitle1"}>{item.title}</Typography>
-            </Grid>
-          </Grid>
-        )
-      })}
+      <Grid item xs={12}>
+        <List>
+          {values.map((item) => (
+            <ListItem key={item} disablePadding
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        textAlign: "center",
+                        marginTop: 5,
+                        fontSize: "1.1rem"
+                      }}>
+              < Typography variant={"body1"}>{item}</Typography>
+            </ListItem>
+          ))}
+        </List>
+      </Grid>
+
     </Grid>
   );
 }

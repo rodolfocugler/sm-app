@@ -13,7 +13,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Home from "@/app/components/home";
 import {styled} from "@mui/material/styles";
 import {Button, useScrollTrigger} from "@mui/material";
@@ -22,6 +21,7 @@ import Services from "@/app/components/services";
 import Footer from "@/app/components/footer";
 import Customers from "@/app/components/customers";
 import Contact from "@/app/components/contact";
+import Image from "next/image";
 
 const drawerWidth = 240;
 const navItems = [ 'Home', 'Quem somos', 'Nossos serviços', 'Clientes', 'Contatos' ];
@@ -29,7 +29,7 @@ const navItems = [ 'Home', 'Quem somos', 'Nossos serviços', 'Clientes', 'Contat
 const MenuOption = styled(Button)(({theme}) => ({
   fontSize: 16,
   fontWeight: 500,
-  color: '#fff',
+  // color: '#fff',
   '&:hover': {
     textDecoration: 'underline',
     fontWeight: 700
@@ -83,7 +83,7 @@ function DrawerAppBar(props) {
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
       <ElevationScroll {...props}>
-        <AppBar component="nav" sx={{display: "flex", paddingY: 1}}>
+        <AppBar component="nav" sx={{display: "flex", paddingY: 1}} color={"secondary"}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -94,14 +94,13 @@ function DrawerAppBar(props) {
             >
               <MenuIcon/>
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{display: {xs: 'flex'}, mr: 4}}
-            >
-              LOGO SM
-            </Typography>
-            <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+            <Image
+              src="/logo.jpeg"
+              width={130}
+              height={43}
+              alt={"SM Assessoria em Radioproteção"}
+            />
+            <Box sx={{display: {xs: 'none', sm: 'block'}, marginLeft: 5}}>
               {navItems.map((item, index) => (
                 <MenuOption
                   key={item}

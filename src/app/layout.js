@@ -9,8 +9,16 @@ export default function RootLayout(props) {
     <html lang="pt-BR">
     <head>
       <meta name="viewport" content="initial-scale=1, width=device-width"/>
-      <title>SM Assessoria em Radioproteção</title>
-      <link rel="icon" href="/favicon.ico"/>
+      <meta charSet="UTF-8"/>
+      <meta name='description'
+            content='Empresa sediada em Sorocaba atuante no ramo de presta&ccedil;&atilde;o de servi&ccedil;os, consultoria e treinamentos em Prote&ccedil;&atilde;o Radiol&oacute;gica.'/>
+      <meta name='keywords'
+            content='radioprote&ccedil;&atilde;o, radiologia, radioprote&ccedil;&atilde;o industrial, empresa de radioprote&ccedil;&atilde;o, Sorocaba, sm assessoria, cnen prote&ccedil;&atilde;o radiol&oacute;gica'/>
+      <link rel='shortcut icon' href='http://smradioprotecao.com.br/'/>
+      <link rel='icon' href='http://smradioprotecao.com.br/'/>
+      <meta name='google-site-verification' content='UA-98439575-1'/>
+      <meta name="googlebot" content="notranslate" />
+
     </head>
     <body>
     <AppRouterCacheProvider options={{enableCssLayer: true}}>

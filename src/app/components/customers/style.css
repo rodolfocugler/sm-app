@@ -8,22 +8,29 @@
 }
 
 button.rec.rec-arrow {
-    background-color: #2196f3;
+    color: #fff;
+    background-color: #002565;
 }
 
 button.rec.rec-arrow:hover,
 button.rec.rec-arrow:focus{
-    background-color: #64b5f6;
+    background-color: #6b83b7;
+    color: #fff;
 }
 
 .rec-dot {
-    box-shadow: 0 0 1px 3px #2196f3 !important;
+    box-shadow: 0 0 1px 3px #002565 !important;
 }
 
 .rec.rec-dot_active {
-    background-color: #64b5f6;
+    background-color: #21509c;
 }
 
 .rec-pagination > button {
-    border-color: #2196f3;
+    border-color: #6b83b7;
+}
+
+img {
+    width: 150px;
+    height: auto;
 }

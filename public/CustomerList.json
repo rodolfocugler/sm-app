@@ -1,0 +1,62 @@
+{
+  "CustomerList": {
+    "bootstrap": [],
+    "elastic": [
+      {
+        "id": 1,
+        "title": "Emerson",
+        "imageUrl": "/emerson.png"
+      },
+      {
+        "id": 2,
+        "title": "Uniso",
+        "imageUrl": "/embraport.png"
+      },
+      {
+        "id": 3,
+        "title": "Embraport",
+        "imageUrl": "/embraport.png"
+      },
+      {
+        "id": 4,
+        "title": "De Nora",
+        "imageUrl": "/de_nora.svg"
+      },
+      {
+        "id": 5,
+        "title": "Emgepron",
+        "imageUrl": "/emgepron.png"
+      },
+      {
+        "id": 6,
+        "title": "FBA",
+        "imageUrl": "/fba.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Maccaferi",
+        "imageUrl": "/maccaferri.png"
+      },
+      {
+        "id": 8,
+        "title": "Proscan Serviços",
+        "imageUrl": "/proscan_servicos.png"
+      },
+      {
+        "id": 9,
+        "title": "Raggi-X",
+        "imageUrl": "/raggi_x.avif"
+      },
+      {
+        "id": 10,
+        "title": "Rapscan",
+        "imageUrl": "/rapscan.png"
+      },
+      {
+        "id": 11,
+        "title": "Votorantim Cimentos",
+        "imageUrl": "/votorantim_cimentos.jpg"
+      }
+    ]
+  }
+}
