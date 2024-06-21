@@ -4,58 +4,93 @@
     "elastic": [
       {
         "id": 1,
-        "title": "Emerson",
-        "imageUrl": "/emerson.png"
+        "title": "Embraport",
+        "imageUrl": "/embraport.jpeg"
       },
       {
         "id": 2,
-        "title": "Uniso",
-        "imageUrl": "/embraport.png"
+        "title": "Neo Parts",
+        "imageUrl": "/neoparts.png"
       },
       {
         "id": 3,
-        "title": "Embraport",
-        "imageUrl": "/embraport.png"
+        "title": "Rapiscan",
+        "imageUrl": "/rapscan.png"
       },
       {
         "id": 4,
-        "title": "De Nora",
-        "imageUrl": "/de_nora.svg"
-      },
-      {
-        "id": 5,
         "title": "Emgepron",
         "imageUrl": "/emgepron.png"
       },
       {
+        "id": 5,
+        "title": "Emerson",
+        "imageUrl": "/emerson.png"
+      },
+      {
         "id": 6,
-        "title": "FBA",
-        "imageUrl": "/fba.jpg"
+        "title": "Flex",
+        "imageUrl": "/flex.svg"
       },
       {
         "id": 7,
+        "title": "DHL Express",
+        "imageUrl": "/dhl.svg"
+      },
+      {
+        "id": 8,
+        "title": "Votorantim Cimentos",
+        "imageUrl": "/votorantim_cimentos.jpg"
+      },
+      {
+        "id": 9,
+        "title": "De Nora",
+        "imageUrl": "/de_nora.svg"
+      },
+      {
+        "id": 10,
+        "title": "UNIFEI",
+        "imageUrl": "/unifei.svg"
+      },
+      {
+        "id": 11,
+        "title": "Uniso",
+        "imageUrl": "/uniso.png"
+      },
+      {
+        "id": 12,
+        "title": "MD Papéis",
+        "imageUrl": "/md_papeis.png"
+      },
+      {
+        "id": 13,
+        "title": "Raggi-X",
+        "imageUrl": "/raggi_x.png"
+      },
+      {
+        "id": 14,
+        "title": "Hayes Lemmerz",
+        "imageUrl": "/hayes_lemmerz.jpg"
+      },
+      {
+        "id": 15,
         "title": "Maccaferi",
         "imageUrl": "/maccaferri.png"
       },
       {
-        "id": 8,
+        "id": 17,
+        "title": "Artecola",
+        "imageUrl": "/artecola.png"
+      },
+      {
+        "id": 18,
         "title": "Proscan Serviços",
         "imageUrl": "/proscan_servicos.png"
       },
       {
-        "id": 9,
-        "title": "Raggi-X",
-        "imageUrl": "/raggi_x.avif"
-      },
-      {
-        "id": 10,
-        "title": "Rapscan",
-        "imageUrl": "/rapscan.png"
-      },
-      {
-        "id": 11,
-        "title": "Votorantim Cimentos",
-        "imageUrl": "/votorantim_cimentos.jpg"
+        "id": 19,
+        "title": "Alpina",
+        "imageUrl": "/alpina.png"
       }
     ]
   }

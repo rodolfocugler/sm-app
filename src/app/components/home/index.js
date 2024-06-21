@@ -6,11 +6,11 @@ function Home({innerRef}) {
     <Box id={"home"} ref={innerRef}
       sx={{
         p: 3,
-        backgroundImage: "url('./header-bg.png')",
-        backgroundPosition: "center",
+        backgroundImage: "url('./header-bg.jpeg')",
+        backgroundPosition: "50% 85%",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: [ '60vh', '60vh', '60vh', '70vh' ]
+        height: [ '60vh', '60vh', '60vh', '60vh' ]
       }}>
 
     </Box>

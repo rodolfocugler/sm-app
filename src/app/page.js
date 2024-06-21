@@ -24,130 +24,132 @@ import Contact from "@/app/components/contact";
 import Image from "next/image";
 
 const drawerWidth = 240;
-const navItems = [ 'Home', 'Quem somos', 'Nossos serviços', 'Clientes', 'Contatos' ];
+const navItems = ['Início', 'Quem somos', 'Nossos serviços', 'Clientes', 'Contatos'];
 
 const MenuOption = styled(Button)(({theme}) => ({
-  fontSize: 16,
-  fontWeight: 500,
-  // color: '#fff',
-  '&:hover': {
-    textDecoration: 'underline',
-    fontWeight: 700
-  }
+    fontSize: 16,
+    fontWeight: 500,
+    color: theme.palette.secondary[900],
+    '&:hover': {
+        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.main,
+        fontWeight: 700,
+        transition: "0.3s"
+    }
 }));
 
 function ElevationScroll(props) {
-  const {children} = props;
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+    const {children} = props;
+    const trigger = useScrollTrigger({
+        disableHysteresis: true,
+        threshold: 0,
+    });
 
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
+    return React.cloneElement(children, {
+        elevation: trigger ? 4 : 0,
+    });
 }
 
 ElevationScroll.propTypes = {
-  children: PropTypes.element.isRequired
+    children: PropTypes.element.isRequired
 };
 
 function DrawerAppBar(props) {
-  const myRef = [ useRef(null), useRef(null), useRef(null), useRef(null), useRef(null) ]
-  const executeScroll = (index) => myRef[index].current.scrollIntoView({behavior: "smooth"})
+    const myRef = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)]
+    const executeScroll = (index) => myRef[index].current.scrollIntoView({behavior: "smooth"})
 
-  const {window} = props;
-  const [ mobileOpen, setMobileOpen ] = React.useState(false);
+    const {window} = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
+    const handleDrawerToggle = () => {
+        setMobileOpen((prevState) => !prevState);
+    };
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{textAlign: 'left'}}>
-              <ListItemText primary={item}/>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
+            <List>
+                {navItems.map((item) => (
+                    <ListItem key={item} disablePadding>
+                        <ListItemButton sx={{textAlign: 'left'}}>
+                            <ListItemText primary={item}/>
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+    const container = window !== undefined ? () => window().document.body : undefined;
 
-  return (
-    <Box sx={{display: 'flex'}}>
-      <CssBaseline/>
-      <ElevationScroll {...props}>
-        <AppBar component="nav" sx={{display: "flex", paddingY: 1}} color={"secondary"}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{mr: 2, display: {sm: 'none'}}}
-            >
-              <MenuIcon/>
-            </IconButton>
-            <Image
-              src="/logo.jpeg"
-              width={130}
-              height={43}
-              alt={"SM Assessoria em Radioproteção"}
-            />
-            <Box sx={{display: {xs: 'none', sm: 'block'}, marginLeft: 5}}>
-              {navItems.map((item, index) => (
-                <MenuOption
-                  key={item}
-                  onClick={() => executeScroll(index)}>
-                  {item}
-                </MenuOption>
-              ))}
+    return (
+        <Box sx={{display: 'flex'}}>
+            <CssBaseline/>
+            <ElevationScroll {...props}>
+                <AppBar component="nav" sx={{display: "flex", paddingY: 1}} color={"secondary"}>
+                    <Toolbar>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{mr: 2, display: {sm: 'none'}}}
+                        >
+                            <MenuIcon/>
+                        </IconButton>
+                        <Image
+                            src="/logo.jpeg"
+                            width={300}
+                            height={68}
+                            alt={"SM Assessoria em Radioproteção"}
+                        />
+                        <Box sx={{display: {xs: 'none', sm: 'block'}, marginLeft: 5}}>
+                            {navItems.map((item, index) => (
+                                <MenuOption
+                                    key={item}
+                                    onClick={() => executeScroll(index)}>
+                                    {item}
+                                </MenuOption>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </AppBar>
+            </ElevationScroll>
+
+            <nav>
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: {xs: 'block', sm: 'none'},
+                        '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
+                    }}
+                >
+                    {drawer}
+                </Drawer>
+            </nav>
+            <Box component="main" width={"100%"}>
+                <Home innerRef={myRef[0]}/>
+                <About innerRef={myRef[1]}/>
+                <Services innerRef={myRef[2]}/>
+                <Customers innerRef={myRef[3]}/>
+                <Contact innerRef={myRef[4]}/>
+                <Footer/>
             </Box>
-          </Toolbar>
-        </AppBar>
-      </ElevationScroll>
-
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: {xs: 'block', sm: 'none'},
-            '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <Box component="main" width={"100%"}>
-        <Home innerRef={myRef[0]}/>
-        <About innerRef={myRef[1]}/>
-        <Services innerRef={myRef[2]}/>
-        <Customers innerRef={myRef[3]}/>
-        <Contact innerRef={myRef[4]}/>
-        <Footer/>
-      </Box>
-    </Box>
-  );
+        </Box>
+    );
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
 };
 
 export default DrawerAppBar;

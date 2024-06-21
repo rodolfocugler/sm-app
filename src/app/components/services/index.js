@@ -5,55 +5,61 @@ import {Grid} from "@mui/material";
 import ServiceRow from "@/app/components/services/serviceRow";
 
 function Services({innerRef}) {
-  const theme = useTheme();
+    const theme = useTheme();
 
-  return (
-    <Grid
-      ref={innerRef}
-      container
-      direction={"column"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      sx={{
-        marginBottom: 5,
-        backgroundColor: theme.palette.primary.main
-      }}
-      spacing={0}
-      paddingX={{xs: 5, sm: 8, lg: 24}}
-      paddingTop={{xs: 5, sm: 8, md: 13}}
-      paddingBottom={{xs: 6}}>
+    return (
+        <Grid
+            ref={innerRef}
+            container
+            direction={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            sx={{
+                backgroundColor: theme.palette.secondary[100],
+                color: theme.palette.secondary[300]
+            }}
+            spacing={0}
+            paddingX={{xs: 5, sm: 4, lg: 24}}
+            paddingTop={{xs: 5, sm: 8, md: 13}}
+            paddingBottom={{xs: 6}}>
 
-      <Typography variant="h4">NOSSOS SERVIÇOS</Typography>
+            <Typography
+                variant="h4"
+                sx={{
+                    color: theme.palette.secondary[900]
+                }}>
+                NOSSOS SERVIÇOS
+            </Typography>
 
-      <Grid
-        container
-        spacing={3}
-        marginTop={3}
-        direction={"row"}>
+            <Grid
+                container
+                spacing={3}
+                marginTop={3}
+                direction={"row"}>
 
-        <Grid item xs={4}>
-          <ServiceRow
-            title={"SUPERVISÃO"}
-            icon={"AssignmentInd"}
-            values={[ "Medicina nuclear", "Radiografia Industrial", "Medidores Nucleares" ]}/>
+                <Grid item xs={12} sm={4}>
+                    <ServiceRow
+                        title={"SUPERVISÃO"}
+                        icon={"AssignmentInd"}
+                        values={["Radiografia Industrial", "Medidores Nucleares Industriais", "Medicina nuclear"]}/>
+                </Grid>
+
+                <Grid item xs={12} sm={4}>
+                    <ServiceRow
+                        title={"CONSULTORIA"}
+                        icon={"Description"}
+                        values={["Licenciamento CNEN", "Treinamentos", "Auditoria"]}/>
+                </Grid>
+
+                <Grid item xs={12} sm={4}>
+                    <ServiceRow
+                        title={"OUTROS"}
+                        icon={"Engineering"}
+                        values={["Levantamento Radiométrico", "Laudos Técnicos", "Teste de Fuga"]}/>
+                </Grid>
+            </Grid>
         </Grid>
-
-        <Grid item xs={4}>
-          <ServiceRow
-            title={"CONSULTORIA"}
-            icon={"Description"}
-            values={[ "Auditoria", "Licenciamento CNEN", "Treinamentos" ]}/>
-        </Grid>
-
-        <Grid item xs={4}>
-          <ServiceRow
-            title={"OUTROS"}
-            icon={"Engineering"}
-            values={[ "Teste de Fuga", "Levantamento Radiométrico", "Laudos Técnicos" ]}/>
-        </Grid>
-      </Grid>
-    </Grid>
-  );
+    );
 }
 
 Services.propTypes = {};

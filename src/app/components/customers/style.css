@@ -9,25 +9,25 @@
 
 button.rec.rec-arrow {
     color: #fff;
-    background-color: #002565;
+    background-color: #085ab1;
 }
 
 button.rec.rec-arrow:hover,
 button.rec.rec-arrow:focus{
-    background-color: #6b83b7;
+    background-color: #168ae3;
     color: #fff;
 }
 
 .rec-dot {
-    box-shadow: 0 0 1px 3px #002565 !important;
+    box-shadow: 0 0 1px 3px #085ab1 !important;
 }
 
 .rec.rec-dot_active {
-    background-color: #21509c;
+    background-color: #085ab1;
 }
 
 .rec-pagination > button {
-    border-color: #6b83b7;
+    border-color: #085ab1;
 }
 
 img {
