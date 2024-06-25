@@ -46,7 +46,7 @@ function About({innerRef}) {
                     <Typography
                         variant="h6"
                         sx={{
-                            mt: 4,
+                            mt: 6,
                             fontSize: 22
                         }}>
                         RESPONSABILIDADE TÉCNICA

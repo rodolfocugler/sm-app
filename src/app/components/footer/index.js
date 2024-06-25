@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {useTheme} from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-import {Grid} from "@mui/material";
+import { Grid } from "@mui/material";
+import  Image from "next/image";
 
 function Footer() {
     const theme = useTheme();
@@ -16,13 +17,13 @@ function Footer() {
                 backgroundColor: theme.palette.primary[900],
                 color: theme.palette.secondary.main
             }}
-            paddingX={{xs: 2, sm: 5, md: 15, lg: 25}}
-            paddingY={{xs: 3}}
+            paddingX={{ xs: 2, sm: 5, md: 15, lg: 25 }}
+            paddingY={{ xs: 3 }}
             direction={"row"}
             spacing={4}
             justifyContent={"space-between"}>
 
-            <Grid item xs={12} sm={6} md={5} lg={4}>
+            <Grid item xs={12} sm={6} md={5} lg={5}>
                 <Box
                     sx={{
                         display: "flex",
@@ -30,24 +31,25 @@ function Footer() {
                         justifyContent: "space-around",
                         alignItems: "center"
                     }}>
-                    <Typography
-                        sx={{
-                            typography: {md: 'h5', sm: 'h6'},
-                            mb: 2
-                        }}>SM Assessoria em Radioproteção</Typography>
+                        <Image
+                            src="/8.png"
+                            width={300}
+                            height={68}
+                            alt={"SM Assessoria em Radioproteção"}
+                        />
                     <Typography sx={{
-                        typography: {sm: 'body1', md: 'h6'},
+                        typography: { sm: 'body1', md: 'h6' },
                     }}>www.smradioprotecao.com.br</Typography>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={2} lg={5} sx={{display: {sm: 'none', md: 'block'}}}></Grid>
-            <Grid item xs={12} sm={6} md={5} lg={3}>
+            <Grid item xs={12} md={2} lg={3} sx={{ display: { sm: 'none', md: 'block' } }}></Grid>
+            <Grid item xs={12} sm={6} md={5} lg={4} sx={{alignContent: "center"}}>
                 <Box
                     sx={{
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
-                        alignItems: {xs: "center", sm: "left"}
+                        alignItems: { xs: "center", sm: "left" }
                     }}>
                     <Typography variant={"h6"}>Fale Conosco</Typography>
 
@@ -57,7 +59,7 @@ function Footer() {
                         flexWrap: 'wrap',
                         marginTop: 10
                     }}>
-                        <CallIcon/>
+                        <CallIcon />
                         <Typography variant={"body2"}>+55 (15) 99707-7238</Typography>
                     </div>
 
@@ -67,7 +69,7 @@ function Footer() {
                         flexWrap: 'wrap',
                         marginTop: 5
                     }}>
-                        <EmailIcon/>
+                        <EmailIcon />
                         <Typography variant={"body2"}>atendimento@smradioprotecao.com.br</Typography>
                     </div>
                 </Box>

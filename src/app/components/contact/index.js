@@ -79,10 +79,14 @@ function Contact({innerRef}) {
                         container
                         direction={"column"}
                         alignItems={"center"}
-                        spacing={2}>
+                        justifyItems={'center'}
+                        spacing={2}
+                        sx={{px: 13}}>
 
                         <Grid item xs={12}>
-                            <Typography variant="body1" mb={5}>Olá, vamos conversar?!</Typography>
+                            <Typography variant="body1" mb={5}>
+                                Para mais informações, contate-nos através de nossos canais diretos ou envie-nos uma mensagem.
+                            </Typography>
                         </Grid>
                         <Grid item xs={12}>
                             <div style={{
