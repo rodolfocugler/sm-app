@@ -19,7 +19,7 @@ const SendButton = styled(Button)(({theme}) => ({
 
 function Contact({innerRef}) {
     const theme = useTheme();
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -120,67 +120,68 @@ function Contact({innerRef}) {
                     }}/>
 
                 <Grid item xs={12} sm={6} px={3}>
-                    <FormControl
-                        fullWidth={true}
-                        margin={"normal"}
-                        sx={{mt: {xs: 3, sm: 0}}}>
-
-                        <TextField
+                    <form action="process_contact.php" method="POST">
+                        <FormControl
                             fullWidth={true}
                             margin={"normal"}
-                            type="text"
-                            color='primary'
-                            label="Nome"
-                            name="name"
-                            variant="outlined"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required={true}/>
+                            sx={{mt: {xs: 3, sm: 0}}}>
 
-                        <TextField
-                            fullWidth={true}
-                            type="email"
-                            margin={"normal"}
-                            color='primary'
-                            name="from"
-                            label="E-mail"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            variant="outlined"
-                            required={true}/>
+                            <TextField
+                                fullWidth={true}
+                                margin={"normal"}
+                                type="text"
+                                color='primary'
+                                label="Nome"
+                                name="name"
+                                variant="outlined"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required={true}/>
 
-                        <TextField
-                            fullWidth={true}
-                            margin={"normal"}
-                            type="text"
-                            color='primary'
-                            label="Telefone"
-                            name="phone"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            variant="outlined"
-                            required={false}/>
+                            <TextField
+                                fullWidth={true}
+                                type="email"
+                                margin={"normal"}
+                                color='primary'
+                                name="from"
+                                label="E-mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                variant="outlined"
+                                required={true}/>
 
-                        <TextField
-                            fullWidth={true}
-                            margin={"normal"}
-                            name="text"
-                            type="text"
-                            color='primary'
-                            multiline={true}
-                            rows={6}
-                            label="Mensagem"
-                            value={text}
-                            onChange={(e) => setText(e.target.value)}
-                            variant="outlined"
-                            required={false}/>
-                        <SendButton disabled={isLoading}
-                                    onClick={onSubmit}>{isLoading ? 'Enviando...' : 'Enviar   '}</SendButton>
-                    </FormControl>
+                            <TextField
+                                fullWidth={true}
+                                margin={"normal"}
+                                type="text"
+                                color='primary'
+                                label="Telefone"
+                                name="phone"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                variant="outlined"
+                                required={false}/>
+
+                            <TextField
+                                fullWidth={true}
+                                margin={"normal"}
+                                name="text"
+                                type="text"
+                                color='primary'
+                                multiline={true}
+                                rows={6}
+                                label="Mensagem"
+                                value={text}
+                                onChange={(e) => setText(e.target.value)}
+                                variant="outlined"
+                                required={false}/>
+                            <SendButton type={"submit"} disabled={isLoading}>{isLoading ? 'Enviando...' : 'Enviar'}</SendButton>
+                        </FormControl>
+                    </form>
                 </Grid>
             </Grid>
         </Grid>
-    );
+);
 }
 
 Contact.propTypes = {};
