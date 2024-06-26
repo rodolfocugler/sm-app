@@ -31,7 +31,7 @@ function Customers({innerRef}) {
                 backgroundColor: theme.palette.secondary[300],
             }}
             paddingX={{xs: 3, sm: 5, md: 10, lg: 24}}
-            paddingTop={{xs: 5, sm: 8, md: 13}}
+            paddingTop={{xs: 10, sm: 8, md: 13}}
             paddingBottom={{xs: 6}}>
 
             <Typography

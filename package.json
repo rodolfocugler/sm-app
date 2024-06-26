@@ -18,6 +18,7 @@
     "@mui/material": "^5.15.14",
     "@mui/material-nextjs": "^5.15.11",
     "@mui/styles": "^5.15.14",
+    "@next/third-parties": "^14.2.4",
     "gh-pages": "^6.1.1",
     "next": "14.1.4",
     "nodemailer": "^6.9.14",

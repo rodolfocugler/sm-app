@@ -3,6 +3,7 @@ import {ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
 import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function RootLayout(props) {
   return (
@@ -18,6 +19,7 @@ export default function RootLayout(props) {
       <link rel='icon' href='http://smradioprotecao.com.br/'/>
       <meta name='google-site-verification' content='UA-98439575-1'/>
       <meta name="googlebot" content="notranslate" />
+      <title>SM Assessoria em Radioproteção</title>
 
     </head>
     <body>
@@ -28,6 +30,7 @@ export default function RootLayout(props) {
         {props.children}
       </ThemeProvider>
     </AppRouterCacheProvider>
+    <GoogleAnalytics gaId="G-05VSLQ06YG" />
     </body>
     </html>
   );

@@ -8,8 +8,8 @@ export async function POST(req) {
             port: 465,
             host: "smtp.gmail.com",
             auth: {
-                user: '',
-                pass: '',
+                user: 'jenkins.raspberrypi@gmail.com',
+                pass: 'tlfz bxat ruad fzpx',
             },
             secure: true,
         });
@@ -19,7 +19,7 @@ export async function POST(req) {
             "Telefone " + data.phone + "</br></br>" + data.text;
         await transporter.sendMail({
             from: data.name + "<" + data.email + ">",
-            to: "",
+            to: "rodolfocugler@outlook.com",
             subject: "E-mail enviado pelo site por " + data.name,
             text: text,
             html: text

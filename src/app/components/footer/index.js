@@ -32,13 +32,14 @@ function Footer() {
                         alignItems: "center"
                     }}>
                         <Image
-                            src="/8.png"
-                            width={300}
+                            src="/logo-white.jpeg"
+                            width={400}
                             height={68}
                             alt={"SM Assessoria em Radioproteção"}
                         />
                     <Typography sx={{
-                        typography: { sm: 'body1', md: 'h6' },
+                        marginTop: 2,
+                        typography: { sm: 'body1', md: 'body2' },
                     }}>www.smradioprotecao.com.br</Typography>
                 </Box>
             </Grid>

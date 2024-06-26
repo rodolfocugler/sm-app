@@ -20,7 +20,7 @@ function About({innerRef}) {
             }}
             paddingLeft={{xs: 5, sm: 8, lg: 24}}
             paddingRight={{xs: 5, sm: 0}}
-            paddingTop={{xs: 5, sm: 8, md: 13}}
+            paddingTop={{xs: 10, sm: 8, md: 13}}
             paddingBottom={{xs: 5, sm: 8, md: 13}}
             ref={innerRef}>
 

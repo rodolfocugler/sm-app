@@ -19,7 +19,7 @@ const SendButton = styled(Button)(({theme}) => ({
 
 function Contact({innerRef}) {
     const theme = useTheme();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -60,7 +60,7 @@ function Contact({innerRef}) {
             alignItems={"center"}
             sx={{marginBottom: 5}}
             paddingX={{xs: 3, sm: 5, md: 10, lg: 24}}
-            paddingTop={{xs: 5, sm: 8, md: 13}}
+            paddingTop={{xs: 10, sm: 8, md: 13}}
             paddingBottom={{xs: 6}}>
 
             <Typography
@@ -71,22 +71,22 @@ function Contact({innerRef}) {
                 CONTATO
             </Typography>
 
+            <Typography variant="body1" mb={5}>
+                Para mais informações, contate-nos através de nossos canais diretos ou envie-nos uma mensagem.
+            </Typography>
             <Grid
                 container
-                direction={"row"}>
+                direction={"row"}
+                alignContent={'center'}>
                 <Grid item xs={12} sm={6}>
                     <Grid
                         container
                         direction={"column"}
                         alignItems={"center"}
                         justifyItems={'center'}
-                        spacing={2}
-                        sx={{px: 13}}>
+                        spacing={2}>
 
                         <Grid item xs={12}>
-                            <Typography variant="body1" mb={5}>
-                                Para mais informações, contate-nos através de nossos canais diretos ou envie-nos uma mensagem.
-                            </Typography>
                         </Grid>
                         <Grid item xs={12}>
                             <div style={{

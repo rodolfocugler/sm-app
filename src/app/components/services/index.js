@@ -20,7 +20,7 @@ function Services({innerRef}) {
             }}
             spacing={0}
             paddingX={{xs: 5, sm: 4, lg: 24}}
-            paddingTop={{xs: 5, sm: 8, md: 13}}
+            paddingTop={{xs: 10, sm: 8, md: 13}}
             paddingBottom={{xs: 6}}>
 
             <Typography

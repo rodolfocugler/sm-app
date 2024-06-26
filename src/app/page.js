@@ -68,10 +68,10 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
             <List>
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                     <ListItem key={item} disablePadding>
                         <ListItemButton sx={{textAlign: 'left'}}>
-                            <ListItemText primary={item}/>
+                            <ListItemText primary={item} onClick={() => executeScroll(index)}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
