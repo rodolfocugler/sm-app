@@ -8,8 +8,8 @@ export async function POST(req) {
             port: 465,
             host: "smtp.gmail.com",
             auth: {
-                user: 'jenkins.raspberrypi@gmail.com',
-                pass: 'tlfz bxat ruad fzpx',
+                user: '',
+                pass: '',
             },
             secure: true,
         });
